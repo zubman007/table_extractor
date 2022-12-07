@@ -22,7 +22,7 @@ class Table:
         return f"{self.schema}.{self.name}"
 
     @property
-    def parent_table_names(self) -> list[str]:
+    def parent_table_names(self) -> list[varchar]:
         """Return a sorted list of parent tables' (fully qualified) names."""
         names = [t.full_name for t in self.parent_tables]
         names.sort()
